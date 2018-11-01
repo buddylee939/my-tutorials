@@ -68,9 +68,9 @@
                 <% end %>
               </li>
               <li class="list-inline-item">
-                <a class="cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle" href="/vendor/assets/img-temp/400x270/img<%= course.id %>.jpg">
+                <%= link_to url_for(course.image), class: 'cbp-lightbox u-icon-v2 u-icon-size--sm g-brd-white g-color-black g-bg-white rounded-circle' do %>
                   <i class="icon-communication-017 u-line-icon-pro"></i>
-                </a>
+                <% end %>                
               </li>
             </ul>
           </div>
