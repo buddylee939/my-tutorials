@@ -61,3 +61,6 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.5'
+gem 'pygments.rb', '~> 1.2', '>= 1.2.1'
+gem 'redcarpet', '~> 3.4'
+gem "aws-sdk-s3", require: false

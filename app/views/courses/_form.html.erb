@@ -1,0 +1,61 @@
+<%= form_with(model: course, local: true) do |form| %>
+  <div class="row">
+    
+    <% if course.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(course.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+        <ul>
+        <% course.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="col-md-6 form-group g-mb-20">
+      <%= form.label :title, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.text_field :title, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15' %>
+    </div>
+
+    <div class="col-md-6 form-group g-mb-20">
+      <%= form.label :url, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.text_field :url, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15' %>
+    </div>
+
+    <div class="col-md-6 form-group g-mb-20">
+      <%= form.label :location, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.text_field :location, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15' %>
+    </div>
+
+    <div class="col-md-6 form-group g-mb-20">
+      <%= form.label :author, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.text_field :author, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15' %>
+    </div>
+
+    <div class="col-md-6 form-group g-mb-20">
+      <%= form.label :language, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.text_field :language, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15' %>
+    </div>
+
+    <div class="col-md-6 form-group g-mb-20">
+      <%= form.label :image, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.file_field :image, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15' %>
+    </div>
+
+    <div class="col-md-12 form-group g-mb-40">
+      <%= form.label :main_points, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.text_area :main_points, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15', rows: '7' %>
+    </div>
+
+    <div class="col-md-12 form-group g-mb-40">
+      <%= form.label :content, class: 'g-color-gray-dark-v2 g-font-size-13' %>
+      <%= form.text_area :content, class: 'form-control g-color-gray-dark-v5 g-bg-white g-bg-white--focus g-brd-gray-light-v4 g-brd-primary--focus rounded-3 g-py-13 g-px-15', rows: '7' %>
+    </div>
+
+
+  </div>
+  <div class="actions">
+    <%= form.submit class: 'btn u-btn-primary rounded-3 g-py-12 g-px-20' %>
+  </div>
+<% end %>

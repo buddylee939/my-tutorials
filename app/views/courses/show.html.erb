@@ -1,0 +1,48 @@
+
+
+<!-- Page Title -->
+<section class="dzsparallaxer auto-init height-is-based-on-content use-loading mode-scroll loaded dzsprx-readyall" data-options="{direction: 'reverse', settings_mode_oneelement_max_offset: '150'}">
+  <!-- Parallax Image -->
+  <div class="divimage dzsparallaxer--target w-100 g-bg-size-cover" style="height: 130%; background-image: url(/vendor/assets/img-temp/header.jpg);"></div>
+  <!-- End Parallax Image -->
+
+  <div class="container text-centers g-z-index-1 g-py-200">
+    <h1 class="g-color-white g-font-weight-700 g-font-size-80 g-mb-25"><%= @course.title %></h1>
+  </div>
+</section>
+<!-- End Page Title -->
+
+<!-- Portfolio Case Study -->
+<section class="container g-pt-100 g-pb-70">
+  <div class="row">
+    <div class="col-md-12 g-mb-30">
+      <div class="show-head">
+        <h2 class="h1 g-color-black g-font-weight-700 mb-4"><%= @course.title %></h2>
+        <span class="g-font-weight-600 g-font-size-20 mb-2"><%= @course.author %> | </span>
+        <span class="g-font-weight-600 g-font-size-16 mb-2">
+          Language: <%= @course.language %> |
+        </span>      
+        <span class="g-font-weight-600 g-font-size-14 mb-2">
+          <%= link_to "From #{@course.location}", @course.url, target: '_blank' %>
+        </span>
+        <p>
+          <%= link_to 'Edit', edit_course_path(@course) %> |
+          <%= link_to 'Back', root_path %>
+        </p>        
+      </div>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <h3 class="show-h3">Main Points</h3>
+      <p class="lead">
+        <%= markdown @course.main_points %>
+      </p>
+      <hr>
+      <h3 class="show-h3">Main Course</h3>
+      <p class="lead">
+        <%= markdown @course.content %>
+      </p>
+    </div>
+  </div>
+</section>
+<!-- End Portfolio Case Study -->
+
