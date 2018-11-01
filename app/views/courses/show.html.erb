@@ -26,7 +26,9 @@
           <%= link_to "From #{@course.location}", @course.url, target: '_blank' %>
         </span>
         <p>
-          <%= link_to 'Edit', edit_course_path(@course) %> |
+          <% if current_user %>
+            <%= link_to 'Edit', edit_course_path(@course) %> |
+          <% end %>
           <%= link_to 'Back', root_path %>
         </p>        
       </div>
