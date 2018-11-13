@@ -1,17 +1,6 @@
 class Course < ApplicationRecord
   has_one_attached :image
-  # validates :image, attached: true
   validates :title, presence: true
-
-  validate :image_present
-
-  private
-
-  def image_present
-    if image.attached? == false
-      errors.add(:image, "must be attached.")
-    end
-  end
 end
 
 
